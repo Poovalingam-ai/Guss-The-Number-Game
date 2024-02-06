@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Game</title>
+    </head>
+    <body>
+        <center>
+<div>
+    <h1>Guss the Number From 1 to 10</h1>
+</div>
+<input id="one" placeholder="Enter The Number">
+<button onclick="check()">check</button>
+<p id="result">You are wrong/right</p>
+<p id="score">score:10</p>
+<img src="ppp download.jpeg">
+
+</center>
+    </body>
+</html>
+<style>
+    div{
+        background-color:yellow;
+        color:red;
+        padding: 20px;
+        width:700px;
+        height: 100px;
+        margin:50px;
+    }
+    img{
+        margin-top: 50px;
+    }
+</style>
+<script>
+    var box1=document.getElementById("one")
+    var result=document.getElementById("result")
+    var score=document.getElementById("score")
+    var a=Math.floor(Math.random()*10)+1
+    var totalscore=10
+    function check()
+    {
+        var enternumber=box1.value
+       if(enternumber==a)
+    {
+        alert("You Win 🏆...")
+        console.log("right")
+        result.textContent="Right"
+        
+    }
+    else
+    {
+    totalscore=totalscore-1
+    console.log("worng")
+    result.textContent="Wrong"
+    score.textContent="score:"+totalscore
+    }
+    
+    }
+
+</script>
